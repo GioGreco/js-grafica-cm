@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Griglia Campo Minato</title>
     <script type="text/javascript" src="./js/myFunctions.js"></script>
@@ -11,19 +12,21 @@
 </head>
 <body>
     <div class="vh-100">
-        <header></header>
+        <header class="d-flex justify-content-center align-items-center">
+            <img class="h-75" src="./img/bomb.png" alt="bomb logo">
+            <h2>Minesweeper.exe</h2>
+        </header>
         <main>
             <div id="gameField" class="d-flex justify-content-center align-items-center">
 
             </div>
+            <div id="gameOver" class="d-flex flex-column justify-content-center align-items-center d-none">
+                <h2>Game Over</h2>
+                <div id="last-game-recap"></div>
+            </div>
         </main>
-        <footer class="d-flex justify-content-between align-items-center">
-            <!-- <div class="buttons-wrapper d-flex justify-content-around align-items-center">
-                <button class="btn btn-primary text-uppercase" value="easy">easy</button>
-                <button class="btn btn-primary text-uppercase" value="hard">hard</button>
-                <button class="btn btn-primary text-uppercase" value="impossible">impossible</button>
-            </div> -->
-            <select name="level" id="level" class="form-control">
+        <footer class="d-flex justify-content-around align-items-center">
+            <select name="level" id="level" class="form-control text-uppercase fw-bold">
                 <option value="easy">easy</option>
                 <option value="hard">hard</option>
                 <option value="impossible">impossible</option>

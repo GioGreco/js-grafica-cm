@@ -8,9 +8,11 @@
 
 /* HEADER */
 header{
-    width: 100%;
+    width: 90%;
     height: 80px;
-    background-color: pink;
+    margin: 0 auto;
+    background-color: white;
+    border-bottom: 2px solid grey;
 }
 
 /* MAIN */
@@ -24,18 +26,33 @@ main #gameField{
     height: 100%;
 }
 
+@keyframes showGrid{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    100%{
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
 main .grid{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    width: 35vw;
-    height: 35vw;
-    background-color: darkolivegreen;
+    background-color: darkslategrey;
+    animation: showGrid 1s ease-in-out forwards;
 }
 
 main .cell{
-    border: 1px solid black;
-    background-color: palegreen;
+    border: 1px solid white;
+    background-color: grey;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .easy{
@@ -52,23 +69,59 @@ main .cell{
     width: calc(100% / 7);
     height: calc(100% / 7); 
 }
+
+.chosen{
+    background-color: lightgreen !important;
+}
+
+.loss{
+    background-color: palevioletred !important;
+}
+
+main #gameOver{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 200px);
+    background-color: rgba(0,0,0,0.5);
+    top: 80px;
+    color: orange;
+}
 /* FOOTER */
 footer{
     width: 100%;
     height: 120px;
-    background-color: lightblue;
+    background-color: white;
 }
 
 footer #play-button{
     display: inline-block;
-    margin: 0 auto;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: black;
+    transition: none;
+}
+
+footer #play-button:hover{
+    background-color: palegreen;
+    color: white;
+    border: none;
 }
 
 footer #level{
-    width: 200px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid black;
+    outline: none;
+    transition: none;
+    cursor: pointer;
 }
 
-footer .buttons-wrapper{
-    width: 50%;
-    height: 100%;
+footer #level:hover{
+    border: none;
+    background-color: lightsalmon;
+    color: white;
 }
