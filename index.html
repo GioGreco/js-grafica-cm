@@ -10,9 +10,28 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <div class="vh-100">
+        <header></header>
+        <main>
+            <div id="gameField" class="d-flex justify-content-center align-items-center">
 
-    
+            </div>
+        </main>
+        <footer class="d-flex justify-content-between align-items-center">
+            <!-- <div class="buttons-wrapper d-flex justify-content-around align-items-center">
+                <button class="btn btn-primary text-uppercase" value="easy">easy</button>
+                <button class="btn btn-primary text-uppercase" value="hard">hard</button>
+                <button class="btn btn-primary text-uppercase" value="impossible">impossible</button>
+            </div> -->
+            <select name="level" id="level" class="form-control">
+                <option value="easy">easy</option>
+                <option value="hard">hard</option>
+                <option value="impossible">impossible</option>
+            </select>
+            <button id="play-button" class="btn btn-secondary">PLAY</button>
+        </footer>
+    </div>
+
 
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
